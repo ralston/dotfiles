@@ -1,22 +1,75 @@
+export PATH=~/bin:$PATH
+
+source ~/dev/cwn/etc/aliases
+alias zshrc="subl ~/.zshrc"
+alias pbcopy="xclip -selection c"
+alias pbpaste="xclip -selection clipboard -o"
+# alias git=hub
+
+# git aliases:
+git config --global alias.co checkout
+git config --global alias.b branch
+alias gcb="git checkout -b"
+alias gs="git status"
+alias g=git
+alias gap="git add -p"
+alias gsi="git submodule update --init"
+alias gsr="git submodule foreach git reset --hard"
+
+# cwn
+alias "ssh-device"="ssh alarm@192.168.128.1"
+
+alias caps="xdotool key Caps_Lock"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export GOROOT=/usr/local/go1.7.5
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=~/dev/cwn/go
+
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/dev/cwn/third_party/protoc/linux
+export PATH=$PATH:~/dev/goo
+
+#lolwat
+export PATH=$PATH:/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/platform/google_appengine/goroot/bin
+export PATH=$PATH:/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/platform/google_appengine
+export PATH=$PATH:~/Downloads/jdk1.8.0_131/bin
 
 # set up nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-export EDITOR="subl -w"
+export EDITOR="subl -n -w"
+export BROWSER=/usr/bin/chromium
 
+fpath+=($fpath '/home/ralston/.nvm/versions/node/v7.9.0/lib/node_modules/pure-prompt/functions')
 
 ################# ZSH ############################
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ralston/.oh-my-zsh
+export ZSH=/home/ralston/.oh-my-zsh
+
+gbr() {
+  COUNT=15
+  BRANCHES=(`git for-each-ref --count=${COUNT} --sort=-committerdate refs/heads/ --format='%(refname)' | cut -d / -f 3-`)
+  for (( i = 0 ; i < ${#BRANCHES[@]} ; i++ )) do
+    echo "${i} ) ${BRANCHES[$i]}"
+  done
+  echo -n "Select a number > "
+  read index
+  echo "Switching to branch ${BRANCHES[$index]}..."
+  g co ${BRANCHES[$index]} 2>&1 > /dev/null
+}
+
+alias gl="git_recent_branch"
+git config --global alias.l "f(){git_recent_branch};f"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="lambda-mod-zsh-theme/lambda-mod"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -60,7 +113,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z)
+plugins=(z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,3 +145,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then source '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+
+[ -s "/home/ralston/.scm_breeze/scm_breeze.sh" ] && source "/home/ralston/.scm_breeze/scm_breeze.sh"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# autoload -U promptinit; promptinit
+# prompt pure
+
+if [ -f ~/.dir_colors ]; then
+    eval `dircolors ~/.dir_colors`
+fi

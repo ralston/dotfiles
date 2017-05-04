@@ -1,3 +1,12 @@
 [user]
 	email = ralston@common.net
 	name = ralston
+[alias]
+	co = checkout
+	l = "f(){git_recent_branch};f"
+	b = branch
+[log]
+      date = relative
+[format]
+      pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+      shortlog = format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
