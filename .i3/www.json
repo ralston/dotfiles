@@ -1,0 +1,48 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "fullscreen_mode": 1,
+    "layout": "splith",
+    "percent": 1,
+    "type": "workspace",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1440,
+               "width": 1147,
+               "x": 1147,
+               "y": 0
+            },
+            "name": "i3: Layout saving in i3 - Chromium",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Chromium$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 414,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "i3-save-tree --output=eDP1 > ~/.i3/all.json",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}

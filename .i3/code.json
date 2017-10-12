@@ -1,0 +1,119 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "type": "workspace",
+    "nodes": [
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "stacked",
+            "percent": 0.8,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1421,
+                       "width": 430,
+                       "x": 1290,
+                       "y": 19
+                    },
+                    "name": "cwn-go - [~/dev/cwn/go] - [go] - ~/dev/cwn/go/src/cwn/agent/actions/module.go - IntelliJ IDEA 2017.1.2",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^jetbrains\\-idea$",
+                                              }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1401,
+                       "width": 1142,
+                       "x": 2294,
+                       "y": 37
+                    },
+                    "name": "~/.config/sublime-text-3/Packages/GoSublime/USAGE.md (js) - Sublime Text (UNREGISTERED)",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Subl$"                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "none",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1421,
+                       "width": 1720,
+                       "x": 10,
+                       "y": 29
+                    },
+                    "name": "New Tab - Chromium",
+                    "percent": 0.333333333333333,
+                    "swallows": [
+                       {
+                       "class": "^Chromium$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        },
+        {
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splitv",
+            "percent": 0.2,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 414,
+                       "width": 654,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ralston@ralston: ~",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^Gnome\\-terminal$"                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "normal",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 414,
+                       "width": 654,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "ralston@ralston: ~",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       "class": "^Gnome\\-terminal$"                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+05/23/2017 04:53:58 AM - i3 4.13 (2016-11-08) starting
+05/23/2017 04:53:58 AM - Parsing configfile /home/ralston/.config/i3/config
+05/23/2017 04:53:58 AM - deciding for version 4 due to this line: # i3 config file (v4)
+05/23/2017 04:53:58 AM - [libi3] ../../i3-4.13/libi3/font.c Using Pango font monospace, size 8
+05/23/2017 04:53:58 AM - [libi3] ../../i3-4.13/libi3/font.c X11 root window dictates 74.797546 DPI
+05/23/2017 04:53:58 AM - Used number 1 for workspace with name 1: www
+05/23/2017 04:53:58 AM - This is not an in-place restart, copying root window contents to a pixmap
+05/23/2017 04:53:58 AM - auto-starting killall -q gsd-print-notifications
+05/23/2017 04:53:58 AM - startup id = i3/killall/1232-0-ralston_TIME0
+05/23/2017 04:53:58 AM - executing: killall -q gsd-print-notifications
+05/23/2017 04:53:58 AM - auto-starting nitrogen --restore
+05/23/2017 04:53:58 AM - executing: nitrogen --restore
+05/23/2017 04:53:58 AM - Starting bar process: i3bar --bar_id=bar-0 --socket="/run/user/1000/i3/ipc-socket.1232"
+05/23/2017 04:53:58 AM - executing: i3bar --bar_id=bar-0 --socket="/run/user/1000/i3/ipc-socket.1232"
+05/23/2017 04:53:58 AM - Not a managed window, ignoring UnmapNotify event
+05/23/2017 04:53:58 AM - IPC: looking for config for bar ID "bar-0"
+05/23/2017 04:53:58 AM - workspace visible? fs = 0x2628a50, ws = 0x2628a50
+05/23/2017 04:53:58 AM - WM_CLASS changed to i3bar (instance), i3bar (class)
+05/23/2017 04:53:58 AM - WM_NAME changed to "i3bar for output xroot-0"
+05/23/2017 04:53:58 AM - Using legacy window title. Note that in order to get Unicode window titles in i3, the application has to set _NET_WM_NAME (UTF-8)
+05/23/2017 04:53:58 AM - This window is of type dock
+05/23/2017 04:53:58 AM - Checking window 0x00800006 (class i3bar)
+05/23/2017 04:53:58 AM - dock status matches
+05/23/2017 04:53:58 AM - workspace visible? fs = 0x2628a50, ws = 0x2628a50
+05/23/2017 04:53:58 AM - workspace visible? fs = 0x26249e0, ws = 0x26249e0
+05/23/2017 04:54:58 AM - Not a managed window, ignoring UnmapNotify event
+05/23/2017 05:51:33 AM - i3 4.13 (2016-11-08) starting
+05/23/2017 05:51:33 AM - Parsing configfile /home/ralston/.config/i3/config
+05/23/2017 05:51:33 AM - deciding for version 4 due to this line: # i3 config file (v4)
+05/23/2017 05:51:33 AM - [libi3] ../../i3-4.13/libi3/font.c Using Pango font monospace, size 8
+05/23/2017 05:51:33 AM - [libi3] ../../i3-4.13/libi3/font.c X11 root window dictates 74.797546 DPI
+05/23/2017 05:51:33 AM - Used number 1 for workspace with name 1: www
+05/23/2017 05:51:33 AM - This is not an in-place restart, copying root window contents to a pixmap
+05/23/2017 05:51:33 AM - auto-starting killall -q gsd-print-notifications
+05/23/2017 05:51:33 AM - startup id = i3/killall/2134-0-ralston_TIME0
+05/23/2017 05:51:33 AM - executing: killall -q gsd-print-notifications
+05/23/2017 05:51:33 AM - auto-starting nitrogen --restore
+05/23/2017 05:51:33 AM - executing: nitrogen --restore
+05/23/2017 05:51:33 AM - Starting bar process: i3bar --bar_id=bar-0 --socket="/run/user/1000/i3/ipc-socket.2134"
+05/23/2017 05:51:33 AM - executing: i3bar --bar_id=bar-0 --socket="/run/user/1000/i3/ipc-socket.2134"
+05/23/2017 05:51:33 AM - Not a managed window, ignoring UnmapNotify event
+05/23/2017 05:51:33 AM - IPC: looking for config for bar ID "bar-0"
+05/23/2017 05:51:33 AM - workspace visible? fs = 0x2124aa0, ws = 0x2124aa0
+05/23/2017 05:51:33 AM - WM_CLASS changed to i3bar (instance), i3bar (class)
+05/23/2017 05:51:33 AM - WM_NAME changed to "i3bar for output xroot-0"
+05/23/2017 05:51:33 AM - Using legacy window title. Note that in order to get Unicode window titles in i3, the application has to set _NET_WM_NAME (UTF-8)
+05/23/2017 05:51:33 AM - This window is of type dock
+05/23/2017 05:51:33 AM - Checking window 0x00800006 (class i3bar)
+05/23/2017 05:51:33 AM - dock status matches
+05/23/2017 05:51:33 AM - workspace visible? fs = 0x2124aa0, ws = 0x2124aa0
+05/23/2017 05:51:33 AM - workspace visible? fs = 0x2120a30, ws = 0x2120a30
+05/23/2017 05:52:33 AM - Not a managed window, ignoring UnmapNotify event
+05/23/2017 01:01:40 PM - startup id = i3/i3lock/2134-1-ralston_TIME628271
+05/23/2017 01:01:40 PM - executing: i3lock
+05/23/2017 01:01:40 PM - Not a managed window, ignoring UnmapNotify event
+05/23/2017 01:02:40 PM - Not a managed window, ignoring UnmapNotify event
+[libi3] ../../i3-4.13/libi3/font.c Using Pango font monospace, size 8
+[libi3] ../../i3-4.13/libi3/font.c X11 root window dictates 74.797546 DPI
