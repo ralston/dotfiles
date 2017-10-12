@@ -1,2 +1,4 @@
-[ -f ~/.xprofile ] && . ~/.xprofile
-exec dwm
+optirun true
+#xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+

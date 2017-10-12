@@ -1,6 +1,11 @@
 export PATH=~/bin:$PATH
+export PATH=~/dev/go/bin:$PATH
+export ANDROID_HOME=/opt/android-sdk
+export PATH=${ANDROID_HOME}/tools:$PATH
+export PATH=${ANDROID_HOME}/platform-tools:$PATH
 
 source ~/dev/cwn/etc/aliases
+alias sns="maim -s /tmp/screenshot.png; imgur /tmp/screenshot.png"
 alias zshrc="subl ~/.zshrc"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection clipboard -o"
@@ -24,7 +29,7 @@ alias caps="xdotool key Caps_Lock"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export GOROOT=/usr/local/go1.7.5
+export GOROOT=~/dev/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=~/dev/cwn/go
 
@@ -113,7 +118,7 @@ ZSH_THEME="lambda-mod-zsh-theme/lambda-mod"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z)
+plugins=(z git)
 
 source $ZSH/oh-my-zsh.sh
 
