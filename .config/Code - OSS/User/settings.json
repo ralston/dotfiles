@@ -1,0 +1,57 @@
+{
+    // Editor
+    "window.zoomLevel": 1,
+    "editor.wordBasedSuggestions": false,
+    // Javascript
+    "javascript.validate.enable": false,
+    "javascript.nameSuggestions": false,
+    "flow.useNPMPackagedFlow": true,
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+    },
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+    },
+    "[scss]": {
+        "editor.formatOnSave": true,
+    },
+    "autoimport.filesToScan": "**/*.{js,jsx}",
+    "autoimport.showNotifications": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "javascriptreact": "javascript"
+    },
+
+    // GOLANG
+    "go.autocompleteUnimportedPackages": true,
+    "go.goroot": "/home/ralston/Development/go",
+    "go.toolsGopath": "/home/ralston/Development/gotools",
+    "go.useLanguageServer": true,
+    "go.gocodeAutoBuild": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+}
