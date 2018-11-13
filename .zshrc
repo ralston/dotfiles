@@ -1,15 +1,25 @@
+ssh-add
+
 export PATH=~/bin:$PATH
-export PATH=~/dev/go/bin:$PATH
+export PATH=~/Development/go/bin:$PATH
 export ANDROID_HOME=/opt/android-sdk
 export PATH=${ANDROID_HOME}/tools:$PATH
 export PATH=${ANDROID_HOME}/platform-tools:$PATH
+export PATH=~/Development/intellij/bin:$PATH
 
-source ~/dev/cwn/etc/aliases
+export NODE_ENV=development
+
+# alias python=$(which python2)
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Development
+# source /usr/local/bin/virtualenvwrapper.sh
+. ~/.virtualenvs/google/bin/activate
+
+source ~/Development/cwn/etc/aliases
 alias sns="maim -s /tmp/screenshot.png; imgur /tmp/screenshot.png"
 alias zshrc="subl ~/.zshrc"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection clipboard -o"
-# alias git=hub
 
 # git aliases:
 git config --global alias.co checkout
@@ -20,33 +30,31 @@ alias g=git
 alias gap="git add -p"
 alias gsi="git submodule update --init"
 alias gsr="git submodule foreach git reset --hard"
+alias gcv="git commit --verbose"
 
 # cwn
-alias "ssh-device"="ssh alarm@192.168.128.1"
-
 alias caps="xdotool key Caps_Lock"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export GOROOT=~/dev/go
+export GOROOT=~/Development/go
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=~/dev/cwn/go
+export GOPATH=~/Development/cwn/go
 
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:~/dev/cwn/third_party/protoc/linux
-export PATH=$PATH:~/dev/goo
+export PATH=$PATH:~/Development/cwn/third_party/protoc/linux
 
 #lolwat
-export PATH=$PATH:/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/platform/google_appengine/goroot/bin
-export PATH=$PATH:/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/platform/google_appengine
+export PATH=$PATH:/home/ralston/Development/google-cloud-sdk/google-cloud-sdk/platform/google_appengine/goroot/bin
+export PATH=$PATH:/home/ralston/Development/google-cloud-sdk/google-cloud-sdk/platform/google_appengine
 export PATH=$PATH:~/Downloads/jdk1.8.0_131/bin
 
 # set up nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-export EDITOR="subl -n -w"
+export EDITOR="nano"
 export BROWSER=/usr/bin/chromium
 
 fpath+=($fpath '/home/ralston/.nvm/versions/node/v7.9.0/lib/node_modules/pure-prompt/functions')
@@ -150,12 +158,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then source '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/ralston/dev/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
@@ -174,3 +176,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [ -f ~/.dir_colors ]; then
     eval `dircolors ~/.dir_colors`
 fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ralston/Development/google-cloud-sdk/path.zsh.inc' ]; then source '/home/ralston/Development/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ralston/Development/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/ralston/Development/google-cloud-sdk/completion.zsh.inc'; fi
+source /usr/share/nvm/init-nvm.sh
