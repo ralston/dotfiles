@@ -1,25 +1,27 @@
 ssh-add
 
+alias python=python3
+
 export PATH=~/bin:$PATH
 export PATH=~/Development/go/bin:$PATH
+export PATH=$PATH:/home/ralston/.gem/ruby/2.6.0/bin
 export ANDROID_HOME=/opt/android-sdk
 export PATH=${ANDROID_HOME}/tools:$PATH
 export PATH=${ANDROID_HOME}/platform-tools:$PATH
 export PATH=~/Development/intellij/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
 export NODE_ENV=development
 
-# alias python=$(which python2)
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Development
-# source /usr/local/bin/virtualenvwrapper.sh
-. ~/.virtualenvs/google/bin/activate
-
 source ~/Development/cwn/etc/aliases
-alias sns="maim -s /tmp/screenshot.png; imgur /tmp/screenshot.png"
-alias zshrc="subl ~/.zshrc"
+
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection clipboard -o"
+
+#wunderline
+alias wl="wunderline"
+alias wli="wunderline inbox"
+alias wla="wunderline add" 
 
 # git aliases:
 git config --global alias.co checkout
@@ -126,7 +128,7 @@ ZSH_THEME="lambda-mod-zsh-theme/lambda-mod"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z git)
+plugins=(z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -176,9 +178,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if [ -f ~/.dir_colors ]; then
     eval `dircolors ~/.dir_colors`
 fi
+
+source /usr/share/nvm/init-nvm.sh
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ralston/Development/google-cloud-sdk/path.zsh.inc' ]; then source '/home/ralston/Development/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/ralston/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ralston/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/ralston/Development/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/ralston/Development/google-cloud-sdk/completion.zsh.inc'; fi
-source /usr/share/nvm/init-nvm.sh
+if [ -f '/home/ralston/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ralston/google-cloud-sdk/completion.zsh.inc'; fi
