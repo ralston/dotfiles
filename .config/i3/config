@@ -174,7 +174,9 @@ bar {
 }
 
 # exec --no-startup-id compton
-exec --no-startup-id compton --backend glx --paint-on-overlay --refresh-rate 60 --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method -1
+# exec --no-startup-id compton --backend glx --paint-on-overlay --refresh-rate 60 --glx-no-stencil --glx-no-rebind-pixmap --glx-swap-method -1
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id betterlockscreen -u ~/Pictures/Wallpapers
 exec --no-startup-id betterlockscreen -w
+exec twmnd

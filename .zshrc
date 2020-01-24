@@ -10,11 +10,21 @@ export PATH=${ANDROID_HOME}/tools:$PATH
 export PATH=${ANDROID_HOME}/platform-tools:$PATH
 export PATH=~/Development/intellij/bin:$PATH
 export PATH=~/.local/bin:$PATH
+export PATH=~/Development/cwn/third_party/protoc/linux:$PATH                     
+
+export APP_VERSION_PREFIX=rtc-
 
 export NODE_ENV=development
 
 source ~/Development/cwn/etc/aliases
 
+function ssh_alias() {
+  ssh $@;
+  setterm -default -clear rest;
+}
+
+alias ssh=ssh_alias
+alias power="git push power HEAD:development -f --no-verify"
 alias pbcopy="xclip -selection c"
 alias pbpaste="xclip -selection clipboard -o"
 
@@ -67,7 +77,7 @@ fpath+=($fpath '/home/ralston/.nvm/versions/node/v7.9.0/lib/node_modules/pure-pr
 export ZSH=/home/ralston/.oh-my-zsh
 
 gbr() {
-  COUNT=15
+  COUNT=10
   BRANCHES=(`git for-each-ref --count=${COUNT} --sort=-committerdate refs/heads/ --format='%(refname)' | cut -d / -f 3-`)
   for (( i = 0 ; i < ${#BRANCHES[@]} ; i++ )) do
     echo "${i} ) ${BRANCHES[$i]}"
@@ -78,7 +88,8 @@ gbr() {
   g co ${BRANCHES[$index]} 2>&1 > /dev/null
 }
 
-alias gl="git_recent_branch"
+alias gl="gbr"
+alias gb="gbr"
 git config --global alias.l "f(){git_recent_branch};f"
 
 # Set name of the theme to load. Optionally, if you set this to "random"

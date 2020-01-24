@@ -5,6 +5,8 @@
 # for terminus font in Archlinux :(
 export PATH=$PATH:~/bin
 
+setxkbmap -option ctrl:nocaps
+
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
